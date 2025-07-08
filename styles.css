@@ -1,0 +1,93 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    margin: 0;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    min-width: 300px;
+    flex: 1;
+    margin-top: 100px;
+}
+
+h1{
+    text-align: center;
+}
+
+hr{
+    width: 75%;
+    height: 2px;
+    background-color: rgba(1,1,255,0.8);
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.navbar-left{
+    width: 10vw;
+    min-width: 180px;
+    max-width: 300px;
+}
+
+.links{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.imagenes{
+    width: 200px;
+}
+
+
+
+
+/* Hamburguesa */
+.navbar-left-check {
+    display: none;
+}
+.navbar-left-check + .navbar-left-check {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    margin: 20px;
+}
+.navbar-left-check + .navbar-left-check span {
+    height: 4px;
+    background: #333;
+    margin: 5px 0;
+    border-radius: 2px;
+    display: block;
+}
+
+/* Menú lateral normal */
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Responsive: hamburguesa visible en pantallas pequeñas */
+@media (max-width: 700px) {
+    .navbar-left-check + .navbar-left-check {
+        display: flex;
+    }
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 60px;
+        width: 60vw;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    }
+    .navbar-left-check:checked ~ .navbar-menu {
+        display: flex;
+    }
+}
