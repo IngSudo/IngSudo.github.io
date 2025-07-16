@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport content="width=device-width, initial-scale=1">
+        <title>Test Form</title>
+        <link rel="stylesheet" href="../estilos/formTest.css">
+    </head>
+
+    <body>
+        <header>
+            <h1 id="title">Test Form</h1>
+            <p id="description">This is my test, to validate my knowledge</p>
+        </header>
+        
+        <form id="survey-form">
+            <div class="labels">
+                <label id="name-label" for="name">Name: </label>
+                <input 
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name..."
+                class="text-inputs"
+                required
+                >
+            </div>
+
+            <div class="labels">
+                <label id="email-label" for="email">Email: </label>
+                <input 
+                type="email" 
+                name="email" 
+                id="email"
+                placeholder="Enter your email..."
+                class="text-inputs"
+                required
+                >
+            </div>
+
+            <div class="labels">
+                <label id="number-label" for="number">Age <span class="clue">(optional)</span></label>
+                <input 
+                type="number"
+                name="age"
+                id="number"
+                placeholder="Enter your Age.."
+                class="text-inputs"
+                min="14"
+                max="80"
+                >
+            </div>
+
+            <div class="labels">
+                <p>Select a Role: </p>
+                <select name="role" id="dropdown" class="text-inputs" required>
+                    <option disabled selected value>Select current role</option>
+                    <option value="estudent">Estudent</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="dir">Director</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="labels">
+                <p>What is your Institute?</p>
+                <label>
+                    <input 
+                    name="name-institute"
+                    value="rumiñahui"
+                    type="radio"
+                    class="input-radio"
+                    checked
+                    >
+                    Rumiñahui
+                </label>
+
+                <label>
+                    <input 
+                    name="name-institute"
+                    value="chicago"
+                    type="radio"
+                    class="input-radio"
+                    >
+                    Chicago
+                </label>
+
+                <label>
+                    <input 
+                    name="name-institute"
+                    value="andino"
+                    type="radio"
+                    class="input-radio"
+                    >
+                    Andino
+                </label>
+            </div>
+
+            <div class="labels">
+                <p>Select your subjects
+                    <span class="clue">(Check all subjects)</span>
+                </p>
+
+                <label>
+                    <input 
+                    name="subjects"
+                    value="languaje"
+                    type="checkbox"
+                    class="input-checkbox"
+                    >
+                    Languaje
+                </label>
+
+                <label>
+                    <input 
+                    name="subjects"
+                    value="math"
+                    type="checkbox"
+                    class="input-checkbox"
+                    >
+                    Math
+                </label>
+
+                <label> 
+                    <input 
+                    name="subjects"
+                    value="database"
+                    type="checkbox"
+                    class="input-checkbox"
+                    >
+                    DataBase
+                </label>
+            </div>
+
+            <div class="labels">
+                <p>Add another opinion</p>
+                <textarea 
+                name="opinion" 
+                id="comments"
+                class="input-textarea"
+                placeholder="Insert your opinion here..."
+                >
+                </textarea>
+            </div>
+            
+            <div class="labels">
+                <button type="submit" class="submit-button" id="submit">
+                    Submit Here
+                </button>
+            </div>
+
+        </form>
+        <p>Hola</p>
+    </body>
+    
+</html>
