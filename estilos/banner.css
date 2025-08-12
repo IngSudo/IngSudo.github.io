@@ -1,37 +1,37 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
-body{
+body {
   background-color: orange;
   padding: 10px;
   margin: 0;
 }
 
 /*Everything related to this label "a"*/
-a{
+a {
   align-self: center;
 }
 
 a:not(.cards__1 a) {
   text-decoration: none;
   color: white;
-  background-color: rgba(0,0,255,1);
+  background-color: rgba(0, 0, 255, 1);
   padding: 10px;
   border-radius: 5px;
   width: max-content;
   font-size: 12px;
 }
 
-a:hover:not(.cards__1 a){
+a:hover:not(.cards__1 a) {
   background-color: gray;
 }
 
-hr{
+hr {
   color: rgb(126, 149, 164);
   border: 1px solid;
   width: 25%;
@@ -55,10 +55,10 @@ hr{
 }
 
 .cards--all {
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   padding: 20px;
   transition: transform 0.3s;
 }
@@ -67,38 +67,38 @@ hr{
   transform: scale(1.05);
 }
 
-.cards--rectangular{
-  aspect-ratio: 3 / 4;    
-  min-height: 300px; 
+.cards--rectangular {
+  aspect-ratio: 3 / 4;
+  min-height: 300px;
 }
 
 /*CARD 1*/
 .cards__1 {
-  grid-area: everlane1; 
-  background-image: url('../img/everlane1.jpg');
-  color: white;    
+  grid-area: everlane1;
+  background-image: url("../img/everlane1.jpg");
+  color: white;
 }
 
-.cards__1 h3{
+.cards__1 h3 {
   font-size: 11px;
   text-align: center;
 }
 
-.cards__1 a{
+.cards__1 a {
   color: white;
   margin-top: auto;
 }
 
 /*CARD 2*/
-.cards__2 { 
-  grid-area: harrys; 
-  background-image: url('../img/nav.png');
-  background-position: 30% center; 
+.cards__2 {
+  grid-area: harrys;
+  background-image: url("../img/nav.png");
+  background-position: 30% center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.cards__2__container{
+.cards__2__container {
   color: white;
   margin-left: 90px;
   align-items: center;
@@ -107,42 +107,42 @@ hr{
   height: 100%;
 }
 
-.cards__2 p{
+.cards__2 p {
   width: 60%;
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.cards__2 a{
+.cards__2 a {
   margin-top: auto;
 }
 
 /*CARD 3*/
-.cards__3 { 
-  grid-area: casper; 
-  background-image: url('../img/casper.webp');
+.cards__3 {
+  grid-area: casper;
+  background-image: url("../img/casper.webp");
   color: rgb(4, 12, 12);
   justify-content: flex-end;
   text-align: center;
   font-size: 25px;
 }
 
-.cards__3 h3{
+.cards__3 h3 {
   width: 40%;
   justify-content: center;
   margin: 10px auto;
 }
 
 /*CARD 4*/
-.cards__4 { 
-  grid-area: everlane2; 
-  background-image: url('../img/everlane2.webp');
+.cards__4 {
+  grid-area: everlane2;
+  background-image: url("../img/everlane2.webp");
   color: azure;
   text-align: center;
 }
 
-.cards__4 p{
+.cards__4 p {
   display: flex;
   width: 70%;
   font-size: 18px;
@@ -152,7 +152,7 @@ hr{
   margin-bottom: 100px;
 }
 
-.cards__4 a{
+.cards__4 a {
   margin-bottom: 100px;
 }
 
