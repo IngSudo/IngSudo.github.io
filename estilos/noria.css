@@ -1,8 +1,14 @@
+body{
+  background-color:rgba(0,0,0,0.7);
+}
+
 .wheel {
+  top: 20%;
+  left: 20%;
   border: 2px solid black;
   border-radius: 50%;
   margin-left: 50px;
-  position: absolute;
+  position: fixed;
   height: 55vw;
   width: 55vw;
   max-width: 500px;
@@ -92,6 +98,9 @@
   }
   50% {
     background-color: purple;
+  }
+  75%{
+    background-color: yellow;
   }
   100% {
     transform: rotate(-360deg);
