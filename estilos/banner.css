@@ -1,29 +1,23 @@
-* {
-  box-sizing: border-box;
-}
-
 h1 {
   text-align: center;
 }
 
 body {
   background-color: orange;
-}
-
-hr {
-  color: rgb(126, 149, 164);
-  border: 1px solid;
-  width: 25%;
-  border-radius: 10px;
+  margin: 0;
 }
 
 /*General labels*/
-.cards--body {
+.jar-banner * {
+  box-sizing: border-box;
+}
+
+.jar-banner {
   padding: 10px;
   margin: 0;
 }
 
-.cards__container {
+.jar-banner__container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr auto auto;
@@ -38,7 +32,7 @@ hr {
   overflow: auto;
 }
 
-.cards--all {
+.jar-banner__card {
   background-size: cover;
   background-position: center;
   display: flex;
@@ -47,7 +41,7 @@ hr {
   transition: transform 0.3s;
 }
 
-.cards--all:hover {
+.jar-banner__card:hover {
   transform: scale(1.05);
 }
 
@@ -57,43 +51,42 @@ hr {
 }
 
 /*Everything related to this label "a or buttons"*/
-.style--button {
+.jar-banner__btn--style {
   text-decoration: none;
   color: white;
   background-color: rgba(0, 0, 255, 1);
   padding: 10px;
   border-radius: 5px;
-  width: max-content;
   font-size: 12px;
 }
 
-.style--button:hover {
+.jar-banner__btn--style:hover {
   background-color: gray;
 }
 
-.btn--center {
+.jar-banner__btn {
   align-self: center;
 }
 
 /*CARD 1*/
-.cards__card-everlane {
+.jar-banner__everlane {
   grid-area: everlane1;
   background-image: url("../img/everlane1.jpg");
   color: white;
 }
 
-.cards__card-everlane h2 {
+.jar-banner__everlane h2 {
   font-size: 11px;
   text-align: center;
 }
 
-.cards__card-everlane a {
+.jar-banner__everlane a {
   color: white;
   margin-top: auto;
 }
 
 /*CARD 2*/
-.cards__card-harrys {
+.jar-banner__harrys {
   grid-area: harrys;
   background-image: url("../img/nav.png");
   background-position: 30% center;
@@ -101,7 +94,7 @@ hr {
   background-size: cover;
 }
 
-.cards__card-harrys__container {
+.jar-banner__harrys__container {
   color: white;
   margin-left: 90px;
   align-items: center;
@@ -110,19 +103,19 @@ hr {
   height: 100%;
 }
 
-.cards__card-harrys p {
+.jar-banner__harrys p {
   width: 60%;
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.cards__card-harrys a {
+.jar-banner__harrys a {
   margin-top: auto;
 }
 
 /*CARD 3*/
-.cards__card-casper {
+.jar-banner__casper {
   grid-area: casper;
   background-image: url("../img/casper.webp");
   color: rgb(4, 12, 12);
@@ -131,22 +124,29 @@ hr {
   font-size: 25px;
 }
 
-.cards__card-casper p {
+.jar-banner__casper p {
   width: 40%;
   justify-content: center;
   margin: 10px auto;
   font-weight: bolder;
 }
 
+.jar-banner__casper--hr {
+  color: rgb(126, 149, 164);
+  border: 1px solid;
+  width: 25%;
+  border-radius: 10px;
+}
+
 /*CARD 4*/
-.cards__card-everlane-2 {
+.jar-banner__everlane-2 {
   grid-area: everlane2;
   background-image: url("../img/everlane2.webp");
   color: azure;
   text-align: center;
 }
 
-.cards__card-everlane-2 p {
+.jar-banner__everlane-2 p {
   display: flex;
   width: 70%;
   font-size: 18px;
@@ -156,13 +156,13 @@ hr {
   margin-bottom: 100px;
 }
 
-.cards__card-everlane-2 a {
+.jar-banner__everlane-2 a {
   margin-bottom: 100px;
 }
 
 /*TABLET*/
 @media (min-width: 678px) {
-  .cards__container {
+  .jar-banner__container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
@@ -174,26 +174,19 @@ hr {
 
 /*DESKTOP*/
 @media (min-width: 992px) {
-  /*ESTA PARTE ES SI NO QUEREMOS SCROLL DEL BODY, IGUAL SE AGREGA, PRIENSO QUE NO,
-  YA QUE SOLO QUEREMOS EVITAR EL SCROLL EN EL BANNER DE CARDS
-  html,
-  body {
-    overflow-x: hidden;
-  }*/
-  
-  .cards__container {
+  .jar-banner__container {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "everlane1 casper everlane2"
       "harrys    casper everlane2";
-    height: 85vh;
+    min-height: 85vh;
     overflow: hidden;
   }
 
-  .cards--all {
+  .jar-banner__card {
     width: 100%;
     height: 100%;
-    min-width: 0; 
+    min-width: 0;
   }
 }
