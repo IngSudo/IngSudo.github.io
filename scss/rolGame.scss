@@ -1,0 +1,58 @@
+$primary-color: #0a0a23;
+$secondary-color: #ffffff;
+$danger-color: #c70d0d;
+$button-color: #feac32;
+$button-gradient: linear-gradient(#fecc4c, #ffac33);
+
+body {
+  background-color: $primary-color;
+}
+
+.game {
+  max-width: 500px;
+  max-height: 400px;
+  background-color: $secondary-color;
+  color: $secondary-color;
+  margin: 30px auto 0;
+  padding: 10px;
+
+  &__controls,
+  &__stats {
+    @extend %bordered;
+    color: $primary-color;
+  }
+
+  &__monster-stats {
+    display: none;
+    @extend %bordered;
+    color: $secondary-color;
+    background-color: $danger-color;
+  }
+
+  &__stat {
+    padding-right: 10px;
+  }
+
+  &__text {
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 10px;
+  }
+
+  &__button {
+    @extend %button-style;
+  }
+}
+
+%bordered {
+  border: 1px solid $primary-color;
+  padding: 5px;
+}
+
+%button-style {
+  cursor: pointer;
+  color: $primary-color;
+  background-color: $button-color;
+  background-image: $button-gradient;
+  border: 3px solid $button-color;
+}
