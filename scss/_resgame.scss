@@ -1,0 +1,21 @@
+@import './mixins';
+
+@include tablet {
+  .game {
+    max-width: 700px;
+    padding: 20px;
+    background-color: red;
+
+    &__text {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include desktop {
+  .game {
+    max-width: 1000px;
+    padding: 30px;
+    background-color: yellow;
+  }
+}
