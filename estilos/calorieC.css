@@ -1,0 +1,87 @@
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 680px;
+  margin: 20px auto;
+}
+
+.calorie-counter__label, .calorie-counter__legend {
+  font-weight: bold;
+}
+.calorie-counter__input-container {
+  display: flex;
+  flex-direction: column;
+}
+.calorie-counter__button {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #fecc4c;
+  border: 2px solid #feac32;
+  min-height: 24px;
+  color: #0a0a23;
+  margin-bottom: 10px;
+}
+.calorie-counter__input, .calorie-counter__select {
+  min-height: 24px;
+  color: #0a0a23;
+  margin-bottom: 10px;
+}
+.calorie-counter__fieldset {
+  margin-bottom: 10px;
+}
+.calorie-counter__output {
+  border: 2px solid #f5f6f7;
+  padding: 10px;
+  text-align: center;
+  margin: 20px auto;
+}
+.calorie-counter__output--hidden {
+  display: none;
+}
+.calorie-counter__output span {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.calorie-counter__output--surplus {
+  color: #ffadad;
+}
+.calorie-counter__output--deficit {
+  color: #acd157;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 20px;
+    background-color: red;
+  }
+  .container {
+    max-width: 800px;
+  }
+  .calorie-counter__button {
+    padding: 8px 12px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 22px;
+    background-color: green;
+  }
+  .container {
+    max-width: 1000px;
+  }
+  .calorie-counter__button {
+    padding: 10px 15px;
+  }
+}
+
+/*# sourceMappingURL=calorieC.css.map */
