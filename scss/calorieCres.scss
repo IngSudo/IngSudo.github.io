@@ -1,0 +1,31 @@
+@import './mixins';
+
+@include md {
+  body {
+    font-size: 20px;
+    background-color: red;
+  }
+
+  .container {
+    max-width: 800px;
+  }
+
+  .calorie-counter__button {
+    padding: 8px 12px;
+  }
+}
+
+@include lg {
+  body {
+    font-size: 22px;
+    background-color: green;
+  }
+
+  .container {
+    max-width: 1000px;
+  }
+
+  .calorie-counter__button {
+    padding: 10px 15px;
+  }
+}

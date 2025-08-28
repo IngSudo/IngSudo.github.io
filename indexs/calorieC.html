@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../estilos/calorieC.css" />
+    <title>Calorie Counter</title>
+  </head>
+  <body>
+    <main class="calorie-counter">
+      <h1 class="calorie-counter__title">Calorie Counter</h1>
+      <div class="calorie-counter__container">
+        <form id="calorie-counter" class="calorie-counter__form">
+          <label for="budget" class="calorie-counter__label">Budget</label>
+          <input
+            type="number"
+            min="0"
+            id="budget"
+            class="calorie-counter__input"
+            placeholder="Daily calorie budget"
+            required
+          />
 
+          <fieldset class="calorie-counter__fieldset calorie-counter__fieldset--breakfast">
+            <legend class="calorie-counter__legend">Breakfast</legend>
+            <div class="calorie-counter__inputs"></div>
+          </fieldset>
+
+          <fieldset class="calorie-counter__fieldset calorie-counter__fieldset--lunch">
+            <legend class="calorie-counter__legend">Lunch</legend>
+            <div class="calorie-counter__inputs"></div>
+          </fieldset>
+
+          <fieldset class="calorie-counter__fieldset calorie-counter__fieldset--dinner">
+            <legend class="calorie-counter__legend">Dinner</legend>
+            <div class="calorie-counter__inputs"></div>
+          </fieldset>
+
+          <fieldset class="calorie-counter__fieldset calorie-counter__fieldset--snacks">
+            <legend class="calorie-counter__legend">Snacks</legend>
+            <div class="calorie-counter__inputs"></div>
+          </fieldset>
+
+          <fieldset class="calorie-counter__fieldset calorie-counter__fieldset--exercise">
+            <legend class="calorie-counter__legend">Exercise</legend>
+            <div class="calorie-counter__inputs"></div>
+          </fieldset>
+
+          <div class="calorie-counter__controls">
+            <span class="calorie-counter__controls-group">
+              <label for="entry-dropdown" class="calorie-counter__label">Add food or exercise:</label>
+              <select id="entry-dropdown" name="options" class="calorie-counter__select">
+                <option value="breakfast" selected>Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snacks">Snacks</option>
+                <option value="exercise">Exercise</option>
+              </select>
+              <button type="button" id="add-entry" class="calorie-counter__button">Add Entry</button>
+            </span>
+          </div>
+
+          <div class="calorie-counter__actions">
+            <button type="submit" class="calorie-counter__button calorie-counter__button--primary">
+              Calculate Remaining Calories
+            </button>
+            <button type="button" id="clear" class="calorie-counter__button calorie-counter__button--secondary">Clear</button>
+          </div>
+        </form>
+
+        <div id="output" class="calorie-counter__output calorie-counter__output--hidden"></div>
+      </div>
+    </main>
+    <script src="../javaScript/calorieC.js"></script>
+  </body>
+</html>
