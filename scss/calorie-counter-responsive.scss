@@ -1,13 +1,14 @@
-@import './mixins';
+$md: 768px;
+$lg: 1024px;
 
-@include md {
+@media screen and (min-width: $md) {
   body {
-    font-size: 20px;
     background-color: red;
   }
 
-  .container {
+  .calorie-counter {
     max-width: 800px;
+    font-size: 20px;
   }
 
   .calorie-counter__button {
@@ -15,14 +16,14 @@
   }
 }
 
-@include lg {
+@media screen and (min-width: $lg) {
   body {
-    font-size: 22px;
     background-color: green;
   }
 
-  .container {
+  .calorie-counter {
     max-width: 1000px;
+    font-size: 22px;
   }
 
   .calorie-counter__button {
