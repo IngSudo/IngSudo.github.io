@@ -10,8 +10,7 @@ body {
   margin: 30px auto 0;
   padding: 10px;
 }
-.game__controls,
-.game__stats {
+.game__controls, .game__stats {
   color: #0a0a23;
 }
 .game__monster-stats {
@@ -27,9 +26,7 @@ body {
   color: #ffffff;
   padding: 10px;
 }
-.game__controls,
-.game__stats,
-.game__monster-stats {
+.game__controls, .game__stats, .game__monster-stats {
   border: 1px solid #0a0a23;
   padding: 5px;
 }
@@ -42,4 +39,4 @@ body {
   border: 3px solid #feac32;
 }
 
-/*# sourceMappingURL=rolGame.css.map */
+/*# sourceMappingURL=role-game.css.map */
