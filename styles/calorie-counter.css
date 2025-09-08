@@ -1,16 +1,14 @@
-body {
+.calorie {
+  font-size: 18px;
   font-family: "Lato", Helvetica, Arial, sans-serif;
   background-color: #1b1b32;
   color: #f5f6f7;
 }
 
-h1 {
+.calorie-counter__title {
   text-align: center;
 }
 
-.calorie-counter {
-  font-size: 18px;
-}
 .calorie-counter__label, .calorie-counter__legend {
   font-weight: bold;
 }
@@ -56,7 +54,7 @@ h1 {
 }
 
 @media screen and (min-width: 768px) {
-  body {
+  .calorie {
     background-color: red;
   }
   .calorie-counter {
@@ -68,7 +66,7 @@ h1 {
   }
 }
 @media screen and (min-width: 1024px) {
-  body {
+  .calorie {
     background-color: green;
   }
   .calorie-counter {

@@ -10,19 +10,18 @@ $light-pink: #ffadad;
 $dark-red: #850000;
 $light-green: #acd157;
 
-body {
+.calorie{
+  font-size: 18px;
   font-family: "Lato", Helvetica, Arial, sans-serif;
   background-color: $fcc-blue;   
-  color: $light-grey;            
+  color: $light-grey;
 }
 
-h1 {
+.calorie-counter__title {
   text-align: center;
 }
 
-.calorie-counter {
-  font-size: 18px;
-  
+.calorie-counter {    
   &__label,
   &__legend {
     font-weight: bold;
@@ -80,7 +79,7 @@ h1 {
 }
 
 @media screen and (min-width: $md) {
-  body {
+  .calorie {
     background-color: red;
   }
 
@@ -95,7 +94,7 @@ h1 {
 }
 
 @media screen and (min-width: $lg) {
-  body {
+  .calorie {
     background-color: green;
   }
 
