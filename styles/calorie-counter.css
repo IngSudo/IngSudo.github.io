@@ -11,9 +11,7 @@ h1 {
 .calorie-counter {
   font-size: 18px;
 }
-
-.calorie-counter__label,
-.calorie-counter__legend {
+.calorie-counter__label, .calorie-counter__legend {
   font-weight: bold;
 }
 .calorie-counter__input-container {
@@ -29,8 +27,7 @@ h1 {
   color: #0a0a23;
   margin-bottom: 10px;
 }
-.calorie-counter__input,
-.calorie-counter__select {
+.calorie-counter__input, .calorie-counter__select {
   min-height: 24px;
   color: #0a0a23;
   margin-bottom: 10px;
