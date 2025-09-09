@@ -1,0 +1,92 @@
+$light-grey: #f5f6f7;
+$dark-blue: #0a0a23;
+$light-yellow: #fecc4c;
+$dark-yellow: #feac32;
+$light-pink: #ffadad;
+$dark-red: #850000;
+$light-green: #acd157;
+
+.calorie-counter {
+  font-size: 18px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__label,
+  &__legend {
+    font-weight: bold;
+  }
+
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: $light-yellow;
+    border: 2px solid $dark-yellow;
+    min-height: 24px;
+    color: $dark-blue;
+    margin-bottom: 10px;
+  }
+
+  &__input,
+  &__select {
+    min-height: 24px;
+    color: $dark-blue;
+    margin-bottom: 10px;
+  }
+
+  &__fieldset {
+    margin-bottom: 10px;
+  }
+
+  &__output {
+    border: 2px solid $light-grey;
+    padding: 10px;
+    text-align: center;
+    margin: 20px auto;
+
+    &--hidden {
+      display: none;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    &--surplus {
+      color: $light-pink;
+    }
+
+    &--deficit {
+      color: $light-green;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .calorie-counter {
+    max-width: 800px;
+    font-size: 20px;
+
+    &__button {
+      padding: 8px 12px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .calorie-counter {
+    max-width: 1000px;
+    font-size: 22px;
+
+    &__button {
+      padding: 10px 15px;
+    }
+  }
+}

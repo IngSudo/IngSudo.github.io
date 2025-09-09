@@ -1,0 +1,24 @@
+$md: 768px;
+$lg: 1024px;
+
+$light-grey: #f5f6f7;
+$dark-blue: #0a0a23;
+$fcc-blue: #1b1b32;
+
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  background-color: $fcc-blue;   
+  color: $light-grey;
+}
+
+@media screen and (min-width: $md) {
+  body {
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: $lg) {
+  body {
+    background-color: green;
+  }
+}
