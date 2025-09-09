@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+.color-changer__container {
+  display: flex;
+  align-items: center;
+}
+
 .color-changer {
   background-color: #110815;
   color: #efefef;
@@ -18,10 +23,6 @@
 .color-changer__title {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-}
-.color-changer__main {
-  display: flex;
-  align-items: center;
 }
 
 .color-info {

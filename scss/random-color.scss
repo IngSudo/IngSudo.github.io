@@ -21,6 +21,11 @@ $light-grey: #efefef;
   border: 3px solid $border-color;
 }
 
+.color-changer__container {
+    display: flex;
+    align-items: center;
+  }
+
 .color-changer {
   background-color: $dark-purple;
   color: $light-grey;
@@ -33,11 +38,6 @@ $light-grey: #efefef;
   &__title {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-  }
-
-  &__main {
-    display: flex;
-    align-items: center;
   }
 }
 
