@@ -6,7 +6,12 @@ body {
   max-width: 500px;
   margin: 30px auto 0;
   padding: 10px;
+<<<<<<< HEAD:estilos/rolGame.css
   background-color: #ffffff;
+=======
+}
+.game__controls, .game__stats {
+>>>>>>> main:styles/role-game.css
   color: #0a0a23;
 }
 .game__controls, .game__stats {
@@ -24,6 +29,14 @@ body {
   color: #ffffff;
   padding: 10px;
 }
+<<<<<<< HEAD:estilos/rolGame.css
+=======
+.game__controls, .game__stats, .game__monster-stats {
+  border: 1px solid #0a0a23;
+  padding: 5px;
+}
+
+>>>>>>> main:styles/role-game.css
 .game__button {
   cursor: pointer;
   color: #0a0a23;
@@ -32,6 +45,7 @@ body {
   border: 3px solid #feac32;
 }
 
+<<<<<<< HEAD:estilos/rolGame.css
 @media screen and (min-width: 768px) {
   .game {
     max-width: 700px;
@@ -51,3 +65,6 @@ body {
 }
 
 /*# sourceMappingURL=rolGame.css.map */
+=======
+/*# sourceMappingURL=role-game.css.map */
+>>>>>>> main:styles/role-game.css
