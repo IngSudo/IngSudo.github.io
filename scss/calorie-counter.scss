@@ -1,27 +1,16 @@
-$md: 768px;
-$lg: 1024px;
-
 $light-grey: #f5f6f7;
 $dark-blue: #0a0a23;
-$fcc-blue: #1b1b32;
 $light-yellow: #fecc4c;
 $dark-yellow: #feac32;
 $light-pink: #ffadad;
 $dark-red: #850000;
 $light-green: #acd157;
 
-.calorie{
-  font-size: 18px;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  background-color: $fcc-blue;   
-  color: $light-grey;
-}
+.calorie-counter {
+  &__title {
+    text-align: center;
+  }
 
-.calorie-counter__title {
-  text-align: center;
-}
-
-.calorie-counter {    
   &__label,
   &__legend {
     font-weight: bold;
@@ -35,17 +24,17 @@ $light-green: #acd157;
   &__button {
     cursor: pointer;
     text-decoration: none;
-    background-color: $light-yellow;   
-    border: 2px solid $dark-yellow;    
+    background-color: $light-yellow;
+    border: 2px solid $dark-yellow;
     min-height: 24px;
-    color: $dark-blue;                 
+    color: $dark-blue;
     margin-bottom: 10px;
   }
 
   &__input,
   &__select {
     min-height: 24px;
-    color: $dark-blue;                 
+    color: $dark-blue;
     margin-bottom: 10px;
   }
 
@@ -54,12 +43,12 @@ $light-green: #acd157;
   }
 
   &__output {
-    border: 2px solid $light-grey;     
+    border: 2px solid $light-grey;
     padding: 10px;
     text-align: center;
     margin: 20px auto;
 
-    &--hidden{
+    &--hidden {
       display: none;
     }
 
@@ -69,41 +58,33 @@ $light-green: #acd157;
     }
 
     &--surplus {
-      color: $light-pink;              
+      color: $light-pink;
     }
 
     &--deficit {
-      color: $light-green;             
+      color: $light-green;
     }
   }
 }
 
-@media screen and (min-width: $md) {
-  .calorie {
-    background-color: red;
-  }
-
+@media screen and (min-width: 768px) {
   .calorie-counter {
     max-width: 800px;
     font-size: 20px;
-  }
 
-  .calorie-counter__button {
-    padding: 8px 12px;
+    &__button {
+      padding: 8px 12px;
+    }
   }
 }
 
-@media screen and (min-width: $lg) {
-  .calorie {
-    background-color: green;
-  }
-
+@media screen and (min-width: 1024px) {
   .calorie-counter {
     max-width: 1000px;
     font-size: 22px;
-  }
 
-  .calorie-counter__button {
-    padding: 10px 15px;
+    &__button {
+      padding: 10px 15px;
+    }
   }
 }
