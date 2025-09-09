@@ -1,5 +1,3 @@
-@import './mixins';
-
 $primary-color: #0a0a23;
 $secondary-color: #ffffff;
 $danger-color: #c70d0d;
@@ -12,22 +10,27 @@ body {
 
 .game {
   max-width: 500px;
+  max-height: 400px;
+  background-color: $secondary-color;
+  color: $secondary-color;
   margin: 30px auto 0;
   padding: 10px;
-  background-color: $secondary-color;
-  color: $primary-color;
 
   &__controls,
   &__stats {
-    border: 1px solid $primary-color;
-    padding: 5px;
+    @extend %bordered;
+    color: $primary-color;
   }
 
   &__monster-stats {
     display: none;
-    border: 1px solid $primary-color;
-    background-color: $danger-color;
+    @extend %bordered;
     color: $secondary-color;
+    background-color: $danger-color;
+  }
+
+  &__stat {
+    padding-right: 10px;
   }
 
   &__text {
@@ -37,12 +40,19 @@ body {
   }
 
   &__button {
-    cursor: pointer;
-    color: $primary-color;
-    background-color: $button-color;
-    background-image: $button-gradient;
-    border: 3px solid $button-color;
+    @extend %button-style;
   }
 }
 
-@import './resgame';
+%bordered {
+  border: 1px solid $primary-color;
+  padding: 5px;
+}
+
+%button-style {
+  cursor: pointer;
+  color: $primary-color;
+  background-color: $button-color;
+  background-image: $button-gradient;
+  border: 3px solid $button-color;
+}
