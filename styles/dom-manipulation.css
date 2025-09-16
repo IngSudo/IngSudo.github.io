@@ -1,0 +1,69 @@
+:root {
+  --very-dark-blue: #0a0a23;
+  --white: #ffffff;
+  --yellow: #f1be32;
+  --golden-yellow: #feac32;
+}
+
+.rps-game {
+  text-align: center;
+  color: var(--white);
+  background-color: var(--very-dark-blue);
+}
+.rps-game__title {
+  margin: 15px 0 20px;
+}
+.rps-game__rules {
+  padding: 10px 0;
+  margin: auto;
+  border-radius: 15px;
+  border: 5px solid var(--yellow);
+  background-color: var(--white);
+  color: var(--very-dark-blue);
+}
+.rps-game__rules-list {
+  list-style-type: none;
+}
+.rps-game__rules-desc {
+  margin: 10px 0;
+}
+@media (min-width: 760px) {
+  .rps-game__rules {
+    width: 60%;
+  }
+}
+.rps-game__score {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  font-size: 1.2rem;
+}
+.rps-game__score-value {
+  font-weight: 500;
+}
+.rps-game__btn {
+  cursor: pointer;
+  width: 100px;
+  margin: 10px;
+  color: var(--very-dark-blue);
+  background-color: var(--golden-yellow);
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border-color: var(--golden-yellow);
+  border-width: 3px;
+}
+.rps-game__btn:hover {
+  background-image: linear-gradient(#ffcc4c, #f89808);
+}
+.rps-game__results {
+  font-size: 1.3rem;
+  margin: 15px 0;
+}
+.rps-game__results-winner {
+  margin-top: 25px;
+}
+.rps-game__results__btn {
+  display: none;
+  margin: 20px auto;
+}
+
+/*# sourceMappingURL=dom-manipulation.css.map */

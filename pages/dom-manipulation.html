@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors game</title>
+    <link rel="stylesheet" href="../styles/dom-manipulation.css" />
+  </head>
+  <body>
+    <main>
+      <div class="rps-game">
+        <h2>Let's play Rock, Paper, Scissors!</h2>
+        <details class="rps-game__rules">
+          <summary class="rps-game__rules-title">Rules to the game</summary>
+
+          <p class="rps-game__rules-desc">
+            You will be playing against the computer.
+          </p>
+          <p class="rps-game__rules-desc">
+            You can choose between Rock, Paper, and Scissors.
+          </p>
+          <p class="rps-game__rules-desc">
+            The first one to three points wins.
+          </p>
+
+          <p class="rps-game__rules-desc">
+            Here are the rules to getting a point in the game:
+          </p>
+          <ul class="rps-game__rules-list">
+            <li class="rps-game__rules-item">Rock beats Scissors</li>
+            <li class="rps-game__rules-item">Scissors beats Paper</li>
+            <li class="rps-game__rules-item">Paper beats Rock</li>
+          </ul>
+          <p class="rps-game__rules-desc">
+            If the player and computer choose the same option (Ex. Paper and
+            Paper), then no one gets the point.
+          </p>
+        </details>
+
+        <div class="rps-game__score">
+          <strong class="rps-game__score-label">
+            Player Score:
+            <span class="rps-game__score-value" id="player-score">0</span>
+          </strong>
+          <strong class="rps-game__score-label">
+            Computer Score:
+            <span class="rps-game__score-value" id="computer-score">0</span>
+          </strong>
+        </div>
+
+        <section class="rps-game__options">
+          <h2 class="rps-game__options-title">Choose an option:</h2>
+          <div class="rps-game__options-btns">
+            <button id="rock-btn" class="rps-game__btn">Rock</button>
+            <button id="paper-btn" class="rps-game__btn">Paper</button>
+            <button id="scissors-btn" class="rps-game__btn">Scissors</button>
+          </div>
+        </section>
+
+        <div class="rps-game__results">
+          <p class="rps-game__results-msg" id="results-msg"></p>
+          <p class="rps-game__results-winner" id="winner-msg"></p>
+          <button class="rps-game__btn" id="reset-game-btn">Play again?</button>
+        </div>
+      </div>
+    </main>
+    <script src="../javascript/dom-manipulation.js"></script>
+  </body>
+</html>
