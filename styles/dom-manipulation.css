@@ -9,6 +9,7 @@
   text-align: center;
   color: var(--white);
   background-color: var(--very-dark-blue);
+  padding: 10px;
 }
 .rps-game__title {
   margin: 15px 0 20px;
@@ -57,13 +58,14 @@
 .rps-game__results {
   font-size: 1.3rem;
   margin: 15px 0;
+  align-items: 0;
 }
 .rps-game__results-winner {
   margin-top: 25px;
 }
-.rps-game__results__btn {
+.rps-game__results .rps-game__btn {
   display: none;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=dom-manipulation.css.map */
