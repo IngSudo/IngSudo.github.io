@@ -1,0 +1,66 @@
+$yellow: #f1be32;
+$golden-yellow: #feac32;
+$dark-purple: #110815;
+$light-grey: #efefef;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin button-style($bg1, $bg2, $border-color, $text-color) {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  color: $text-color;
+  background-color: $border-color;
+  background-image: linear-gradient($bg1, $bg2);
+  border: 3px solid $border-color;
+}
+
+.color-changer__container {
+    display: flex;
+    align-items: center;
+  }
+
+.color-changer {
+  background-color: $dark-purple;
+  color: $light-grey;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.color-info {
+  margin: 15px 0 25px;
+  font-size: 1.2rem;
+
+  &__text {
+    font-weight: bold;
+  }
+
+  &__code {
+    font-family: monospace;
+    font-size: 1.3rem;
+  }
+}
+
+.button {
+  &--primary {
+    @include button-style(#fecc4c, #ffac33, $golden-yellow, $dark-purple);
+
+    &:hover {
+      background-image: linear-gradient(#ffcc4c, #f89808);
+    }
+  }
+}

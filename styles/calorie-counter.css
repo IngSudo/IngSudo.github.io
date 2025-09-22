@@ -1,0 +1,70 @@
+.calorie-counter {
+  font-size: 18px;
+}
+.calorie-counter__title {
+  text-align: center;
+}
+.calorie-counter__label, .calorie-counter__legend {
+  font-weight: bold;
+}
+.calorie-counter__input-container {
+  display: flex;
+  flex-direction: column;
+}
+.calorie-counter__button {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #fecc4c;
+  border: 2px solid #feac32;
+  min-height: 24px;
+  color: #0a0a23;
+  margin-bottom: 10px;
+}
+.calorie-counter__input, .calorie-counter__select {
+  min-height: 24px;
+  color: #0a0a23;
+  margin-bottom: 10px;
+}
+.calorie-counter__fieldset {
+  margin-bottom: 10px;
+}
+.calorie-counter__output {
+  border: 2px solid #f5f6f7;
+  padding: 10px;
+  text-align: center;
+  margin: 20px auto;
+}
+.calorie-counter__output--hidden {
+  display: none;
+}
+.calorie-counter__output span {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.calorie-counter__output--surplus {
+  color: #ffadad;
+}
+.calorie-counter__output--deficit {
+  color: #acd157;
+}
+
+@media screen and (min-width: 768px) {
+  .calorie-counter {
+    max-width: 800px;
+    font-size: 20px;
+  }
+  .calorie-counter__button {
+    padding: 8px 12px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .calorie-counter {
+    max-width: 1000px;
+    font-size: 22px;
+  }
+  .calorie-counter__button {
+    padding: 10px 15px;
+  }
+}
+
+/*# sourceMappingURL=calorie-counter.css.map */

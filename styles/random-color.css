@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.color-changer__container {
+  display: flex;
+  align-items: center;
+}
+
+.color-changer {
+  background-color: #110815;
+  color: #efefef;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.color-changer__title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.color-info {
+  margin: 15px 0 25px;
+  font-size: 1.2rem;
+}
+.color-info__text {
+  font-weight: bold;
+}
+.color-info__code {
+  font-family: monospace;
+  font-size: 1.3rem;
+}
+
+.button--primary {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  color: #110815;
+  background-color: #feac32;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border: 3px solid #feac32;
+}
+.button--primary:hover {
+  background-image: linear-gradient(#ffcc4c, #f89808);
+}
+
+/*# sourceMappingURL=random-color.css.map */

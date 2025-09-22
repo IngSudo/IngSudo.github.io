@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/role-game.css" />
+    <title>RPG - Dragon Repeller</title>
+  </head>
+  <body>
+    <div class="game">
+      <div class="game__stats">
+        <span class="game__stat">
+          XP:
+          <strong
+            ><span class="game__stat-value game__stat-value--xp"
+              >0</span
+            ></strong
+          >
+        </span>
+        <span class="game__stat">
+          Health:
+          <strong
+            ><span class="game__stat-value game__stat-value--health"
+              >100</span
+            ></strong
+          >
+        </span>
+        <span class="game__stat">
+          Gold:
+          <strong
+            ><span class="game__stat-value game__stat-value--gold"
+              >50</span
+            ></strong
+          >
+        </span>
+      </div>
+
+      <div class="game__controls">
+        <button class="game__button game__button--1">Go to store</button>
+        <button class="game__button game__button--2">Go to cave</button>
+        <button class="game__button game__button--3">Fight dragon</button>
+      </div>
+
+      <div class="game__monster-stats">
+        <span class="game__stat">
+          Monster Name:
+          <strong
+            ><span
+              class="game__stat-value game__stat-value--monster-name"
+            ></span
+          ></strong>
+        </span>
+        <span class="game__stat">
+          Health:
+          <strong
+            ><span
+              class="game__stat-value game__stat-value--monster-health"
+            ></span
+          ></strong>
+        </span>
+      </div>
+
+      <div class="game__text">
+        Welcome to Dragon Repeller. You must defeat the dragon that is
+        preventing people from leaving the town. You are in the town square.
+        Where do you want to go? Use the buttons above.
+      </div>
+    </div>
+    <script src="../javascript/role-game.js"></script>
+  </body>
+</html>

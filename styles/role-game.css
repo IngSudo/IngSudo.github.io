@@ -1,0 +1,42 @@
+body {
+  background-color: #0a0a23;
+}
+
+.game {
+  max-width: 500px;
+  max-height: 400px;
+  background-color: #ffffff;
+  color: #ffffff;
+  margin: 30px auto 0;
+  padding: 10px;
+}
+.game__controls, .game__stats {
+  color: #0a0a23;
+}
+.game__monster-stats {
+  display: none;
+  color: #ffffff;
+  background-color: #c70d0d;
+}
+.game__stat {
+  padding-right: 10px;
+}
+.game__text {
+  background-color: #0a0a23;
+  color: #ffffff;
+  padding: 10px;
+}
+.game__controls, .game__stats, .game__monster-stats {
+  border: 1px solid #0a0a23;
+  padding: 5px;
+}
+
+.game__button {
+  cursor: pointer;
+  color: #0a0a23;
+  background-color: #feac32;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border: 3px solid #feac32;
+}
+
+/*# sourceMappingURL=role-game.css.map */
