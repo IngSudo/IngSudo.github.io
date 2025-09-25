@@ -1,47 +1,51 @@
-(function () {
-  function palindrome(rootE) {
-    const palInput = rootE.querySelector(".palindrome__container-input");
-    const palCheckBtn = rootE.querySelector(".palindrome__container-btn");
-    const palResults = rootE.querySelector(".palindrome__container-results");
+class PalindromeChecker {
+  constructor(rootE) {
+    this.rootE = rootE;
+    this.palInput = this.rootE.querySelector(".palindrome__container-input");
+    this.palCheckBtn = this.rootE.querySelector(".palindrome__container-btn");
+    this.palResults = this.rootE.querySelector(
+      ".palindrome__container-results"
+    );
 
-    const checkForPalindrome = (input) => {
-      const originalInput = input;
+    this.initEvents();
+  }
 
-      if (input === "") {
-        alert("Please input a value");
-        return;
-      }
-
-      palResults.replaceChildren();
-
-      const lowerCaseStr = input.replace(/[^A-Za-z0-9]/gi, "").toLowerCase();
-      let resultMsg = `${originalInput} ${
-        lowerCaseStr === [...lowerCaseStr].reverse().join("") ? "is" : "is not"
-      } a palindrome.`;
-
-      const pTag = document.createElement("p");
-      pTag.className = "palindrome__user-input";
-      pTag.innerText = resultMsg;
-      palResults.appendChild(pTag);
-
-      palResults.classList.remove("palindrome__container-results--hidden");
-    };
-
-    palCheckBtn.addEventListener("click", () => {
-      checkForPalindrome(palInput.value);
-      palInput.value = "";
-    });
-
-    palInput.addEventListener("keydown", (e) => {
+  initEvents() {
+    this.palCheckBtn.addEventListener("click", () =>
+      this.checkForPalindrome(this.palInput.value)
+    );
+    this.palInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
-        checkForPalindrome(palInput.value);
-        palInput.value = "";
+        this.checkForPalindrome(this.palInput.value);
       }
     });
   }
 
-  const components = document.querySelectorAll(".palindrome");
-  for (const component of components) {
-    palindrome(component);
+  checkForPalindrome(input) {
+    const originalInput = input;
+
+    if (input === "") {
+      alert("Please input a value");
+      return;
+    }
+
+    const lowerCaseStr = input.replace(/[^A-Za-z0-9]/gi, "").toLowerCase();
+    const isPalindrome = lowerCaseStr === [...lowerCaseStr].reverse().join("");
+    const resultMsg = `${originalInput} ${
+      isPalindrome ? "is" : "is not"
+    } a palindrome.`;
+
+    const pTag = document.createElement("p");
+    pTag.className = "palindrome__user-input";
+    pTag.innerText = resultMsg;
+    this.palResults.replaceChildren(pTag);
+
+    this.palResults.classList.remove("palindrome__container-results--hidden");
+
+    this.palInput.value = "";
   }
-})();
+}
+
+document
+  .querySelectorAll(".palindrome")
+  .forEach((component) => new PalindromeChecker(component));
