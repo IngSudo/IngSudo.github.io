@@ -1,7 +1,6 @@
 .palindrome {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #0a0a23;
   color: #ffffff;
@@ -12,6 +11,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.palindrome * {
+  box-sizing: border-box;
 }
 .palindrome__title {
   text-align: center;
@@ -38,7 +40,7 @@
 }
 .palindrome__container-input {
   height: 30px;
-  width: 80%;
+  width: 60%;
   max-width: 250px;
   text-align: center;
   font-size: 1.2rem;
@@ -62,6 +64,8 @@
   cursor: pointer;
 }
 .palindrome__container-results {
+  display: block;
+  width: 100%;
   overflow-y: auto;
   word-wrap: break-word;
   min-height: 50px;

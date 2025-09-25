@@ -5,7 +5,7 @@
     const palResults = rootE.querySelector(".palindrome__container-results");
 
     const checkForPalindrome = (input) => {
-      const originalInput = input; 
+      const originalInput = input;
 
       if (input === "") {
         alert("Please input a value");
@@ -19,7 +19,7 @@
         lowerCaseStr === [...lowerCaseStr].reverse().join("") ? "is" : "is not"
       } a palindrome.`;
 
-      const pTag = rootE.ownerDocument.createElement("p");
+      const pTag = document.createElement("p");
       pTag.className = "palindrome__user-input";
       pTag.innerText = resultMsg;
       palResults.appendChild(pTag);
