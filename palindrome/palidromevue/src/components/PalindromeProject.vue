@@ -1,0 +1,256 @@
+<template>
+  <div class="palindrome">
+    <h2 class="palindrome__title">{{ title }}?</h2>
+
+    <div class="palindrome__container">
+      <p class="palindrome__container-title">
+        {{ inputLabel }}
+      </p>
+      <input
+        class="palindrome__container-input"
+        type="text"
+        placeholder="placeholder"
+        v-model="userInput"
+        @keydown.enter="checkForPalindrome"
+      />
+      <button class="palindrome__container-btn" @click="checkForPalindrome">
+        {{ buttonLabel }}
+      </button>
+      <div
+        class="palindrome__container-results"
+        :class="{
+          'palindrome__container-results--hidden': results.length === 0,
+        }"
+      >
+        <p
+          v-for="(res, index) in results"
+          :key="index"
+          class="palindrome__user-input"
+        >
+          {{ res }}
+        </p>
+      </div>
+    </div>
+
+    <div class="palindrome__note">
+      <p class="palindrome__note-text">
+        <span role="img" aria-label="light-bulb">&#128161;</span>
+        <dfn>palindrome</dfn> : {{ noteText }}
+      </p>
+    </div>
+  </div>
+</template>
+
+<script setup>
+/* global defineProps */
+import { ref } from "vue";
+
+defineProps({
+  title: String,
+  inputLabel: String,
+  placeholder: String,
+  buttonLabel: String,
+  noteText: String,
+});
+
+const userInput = ref("");
+const results = ref([]);
+
+function checkForPalindrome() {
+  if (!userInput.value) {
+    alert("Please input a value");
+    return;
+  }
+
+  const lowerCaseStr = userInput.value
+    .replace(/[^A-Za-z0-9]/gi, "")
+    .toLowerCase();
+  const isPalindrome = lowerCaseStr === [...lowerCaseStr].reverse().join("");
+  const resultMsg = `${userInput.value} ${
+    isPalindrome ? "is" : "is not"
+  } a palindrome.`;
+
+  results.value = [resultMsg];
+  userInput.value = "";
+}
+</script>
+
+<style lang="scss" scoped>
+.palindrome {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #0a0a23;
+  color: #ffffff;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  & * {
+    box-sizing: border-box;
+  }
+
+  &__title {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    width: min(90vw, 80%);
+    min-height: 100px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: white;
+    box-shadow: 0 6px 6px #002ead;
+
+    &-title {
+      color: #0a0a23;
+      margin-bottom: 20px;
+    }
+
+    &-input {
+      height: 30px;
+      width: 60%;
+      max-width: 250px;
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 10px;
+      border: none;
+      border-bottom: 2px solid #5a01a7;
+
+      &:focus {
+        border-bottom: 3px solid #5a01a7;
+      }
+
+      &::placeholder {
+        text-align: left;
+      }
+    }
+
+    &-btn {
+      width: 90px;
+      border: none;
+      padding: 10px;
+      border-radius: 15px;
+      background-color: #5a01a7;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    &-results {
+      display: block;
+      width: 100%;
+      overflow-y: auto;
+      word-wrap: break-word;
+      min-height: 50px;
+      color: black;
+
+      &--hidden {
+        display: none;
+      }
+    }
+  }
+
+  &__note {
+    width: min(80vw, 70%);
+    font-size: 1.3rem;
+    min-height: 140px;
+    background-color: #00471b;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-text {
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+
+  &__user-input {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .palindrome {
+    background-color: red;
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__container {
+      width: min(100vw, 400px);
+      padding: 25px;
+
+      &-input {
+        max-width: 280px;
+        font-size: 1.3rem;
+      }
+
+      &-btn {
+        width: 95px;
+        padding: 11px;
+      }
+    }
+
+    &__note {
+      width: min(90vw, 80%);
+      font-size: 1.4rem;
+      min-height: 150px;
+    }
+
+    &__user-input {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .palindrome {
+    background-color: skyblue;
+    &__title {
+      font-size: 3.5rem;
+    }
+
+    &__container {
+      width: min(100vw, 450px);
+      padding: 30px;
+
+      &-input {
+        max-width: 300px;
+        font-size: 1.4rem;
+      }
+
+      &-btn {
+        width: 100px;
+        padding: 12px;
+      }
+    }
+
+    &__note {
+      width: min(100vw, 90%);
+      font-size: 1.5rem;
+      min-height: 160px;
+    }
+
+    &__user-input {
+      font-size: 1.6rem;
+    }
+  }
+}
+</style>
