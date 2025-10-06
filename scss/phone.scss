@@ -104,6 +104,19 @@ $gray-00: #fff;
         padding: 5px;
         text-align: $center-text;
         margin: 10px 0;
+
+        &--valid {
+          color: #00471b;
+        }
+
+        &--invalid {
+          color: #4d3800;
+        }
+
+        &--error {
+          color: #a94442;
+          font-weight: bold;
+        }
       }
     }
   }

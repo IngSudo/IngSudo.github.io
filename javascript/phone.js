@@ -2,39 +2,57 @@
   class Phone {
     constructor(rootE) {
       this.rootE = rootE;
-      this.conInput = this.rootE.querySelector(".phone__container__input");
+      this.phoneInput = this.rootE.querySelector(".phone__container__input");
       this.checkBtn = this.rootE.querySelector(
         ".phone__container__footer__btn--check"
       );
       this.clearBtn = this.rootE.querySelector(
         ".phone__container__footer__btn--clear"
       );
-      this.results = this.rootE.querySelector(".phone__container__results");
+      this.resultsContainer = this.rootE.querySelector(
+        ".phone__container__results"
+      );
 
       this.initEvents();
     }
 
     initEvents() {
       this.checkBtn.addEventListener("click", () => {
-        this.checkValidNumber(this.conInput.value);
-        this.conInput.value = "";
+        this.checkValidNumber(this.phoneInput.value);
+        this.phoneInput.value = "";
       });
 
-      this.conInput.addEventListener("keydown", (e) => {
+      this.phoneInput.addEventListener("keydown", (e) => {
         if (e.key === "Enter") {
-          this.checkValidNumber(this.conInput.value);
-          this.conInput.value = "";
+          this.checkValidNumber(this.phoneInput.value);
+          this.phoneInput.value = "";
+        } else {
+          const textError = this.resultsContainer.querySelector(
+            ".phone__container__results__text--error"
+          );
+          if (textError) {
+            this.clearResults();
+          }
         }
       });
 
       this.clearBtn.addEventListener("click", () => {
-        this.results.textContent = "";
+        this.resultsContainer.textContent = "";
       });
     }
 
+    clearResults() {
+      this.resultsContainer.textContent = "";
+    }
+
     checkValidNumber(input) {
+      const resultText = document.createElement("p");
+      resultText.className = "phone__container__results__text";
+
       if (input === "") {
-        alert("Please provide a phone number");
+        resultText.classList.add("phone__container__results__text--error");
+        resultText.innerText = "Please inserte a valid number";
+        this.resultsContainer.replaceChildren(resultText);
         return;
       }
 
@@ -46,20 +64,15 @@
         `${countryCode}${areaCode}${spacesDashes}${phoneNumber}`
       );
 
-      const labelP = this.rootE.ownerDocument.createElement("p");
-      labelP.className = "phone__container__results__text";
-
       if (phoneRegex.test(input)) {
-        labelP.style.color = "#00471b";
+        resultText.classList.add("phone__container__results__text--valid");
+        resultText.innerText = `Valid US number: ${input}`;
       } else {
-        labelP.style.color = "#4d3800";
+        resultText.classList.add("phone__container__results__text--invalid");
+        resultText.innerText = `Invalid US number: ${input}`;
       }
 
-      labelP.innerText = `${
-        phoneRegex.test(input) ? "Valid" : "Invalid"
-      } US number: ${input}`;
-
-      this.results.appendChild(labelP);
+      this.resultsContainer.appendChild(resultText);
     }
   }
 

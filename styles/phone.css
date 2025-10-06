@@ -91,5 +91,15 @@
   text-align: center;
   margin: 10px 0;
 }
+.phone__container__results__text--valid {
+  color: #00471b;
+}
+.phone__container__results__text--invalid {
+  color: #4d3800;
+}
+.phone__container__results__text--error {
+  color: #a94442;
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=phone.css.map */
