@@ -100,12 +100,27 @@
     &--hidden {
       display: none;
     }
+  }
 
-    &--alert {
-      font-size: 2rem;
-      background-color: var(--danger-background);
-      border: 3px solid var(--danger-color);
+  &__errors {
+    margin-top: 15px;
+    text-align: center;
+
+    &__error {
+      display: none;
       color: var(--danger-color);
+      background-color: var(--danger-background);
+      border: 2px solid var(--danger-color);
+      padding: 10px;
+      font-size: 2rem;
+      max-width: 500px;
+      min-height: 55px;
+      padding: 15px;
+      overflow-wrap: break-word;
+
+      &--visible {
+        display: block;
+      }
     }
   }
 }

@@ -11,7 +11,9 @@
       <h1 class="converter__title">Roman Numeral Converter</h1>
       <form class="converter__form">
         <fieldset class="converter__form__fieldset">
-          <label for="number" class="converter__form__fieldset-label">Enter a Number</label><br />
+          <label for="number" class="converter__form__fieldset-label"
+            >Enter a Number</label
+          ><br />
           <input
             type="number"
             id="number"
@@ -24,6 +26,17 @@
         </fieldset>
       </form>
       <div class="converter__output converter__output--hidden"></div>
+      <div class="converter__errors">
+        <p class="converter__errors__error converter__errors__error--invalid">
+          Please enter a valid number
+        </p>
+        <p class="converter__errors__error converter__errors__error--low">
+          Please enter a number greater than or equal to 1
+        </p>
+        <p class="converter__errors__error converter__errors__error--high">
+          Please enter a number less than or equal to 3999
+        </p>
+      </div>
     </div>
     <script src="../javascript/roman-numeral-converter.js"></script>
   </body>

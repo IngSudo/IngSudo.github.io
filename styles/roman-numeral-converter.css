@@ -92,11 +92,24 @@
 .converter__output--hidden {
   display: none;
 }
-.converter__output--alert {
-  font-size: 2rem;
-  background-color: var(--danger-background);
-  border: 3px solid var(--danger-color);
+.converter__errors {
+  margin-top: 15px;
+  text-align: center;
+}
+.converter__errors__error {
+  display: none;
   color: var(--danger-color);
+  background-color: var(--danger-background);
+  border: 2px solid var(--danger-color);
+  padding: 10px;
+  font-size: 2rem;
+  max-width: 500px;
+  min-height: 55px;
+  padding: 15px;
+  overflow-wrap: break-word;
+}
+.converter__errors__error--visible {
+  display: block;
 }
 
 .converter__form__fieldset-input:focus-visible, .converter__form__fieldset-btn:focus-visible {
