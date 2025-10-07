@@ -1,0 +1,120 @@
+.cash-register {
+  background-color: #0a0a23;
+  color: #dfdfe2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 10px;
+}
+.cash-register * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.cash-register__title {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  text-align: center;
+}
+.cash-register__change-due {
+  text-align: left;
+  font-size: 1.2rem;
+}
+.cash-register__input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0 20px;
+}
+.cash-register__input-field {
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+}
+.cash-register__label {
+  font-size: 18px;
+}
+.cash-register__btn {
+  border-radius: 10%;
+  border: none;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+}
+.cash-register__btn--check {
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  color: #0a0a23;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #feac32;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border-color: #feac32;
+  border-width: 3px;
+}
+.cash-register__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cash-register__display {
+  display: flex;
+  align-items: center;
+}
+.cash-register__price-screen {
+  border: 10px solid #99c9ff;
+  background-color: black;
+  height: 50px;
+  width: 200px;
+  margin-left: -40px;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.cash-register__top {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 35px 35px 0 0;
+  padding-top: 20px;
+  background-color: #99c9ff;
+  height: 250px;
+  width: 325px;
+}
+.cash-register__btns {
+  width: 25%;
+}
+.cash-register__drawer-display {
+  font-size: 1.1rem;
+  background-color: white;
+  width: 55%;
+  height: 95%;
+  color: black;
+  padding: 10px;
+}
+.cash-register__bottom {
+  background-color: #99c9ff;
+  height: 50px;
+  width: 325px;
+  margin-top: 10px;
+}
+.cash-register__circle {
+  margin: 15px auto;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+}
+
+/*# sourceMappingURL=cash-register.css.map */
