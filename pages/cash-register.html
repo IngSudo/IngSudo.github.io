@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="../styles/cash-register.css" />
+  </head>
+  <body>
+    <main>
+      <div class="cash-register">
+        <h1 class="cash-register__title">Cash Register Project</h1>
+
+        <div id="change-due" class="cash-register__change-due"></div>
+
+        <div class="cash-register__input">
+          <label for="cash" class="cash-register__label"
+            >Enter cash from customer:</label
+          >
+          <input
+            type="number"
+            id="cash"
+            class="cash-register__input-field"
+            value=""
+          />
+          <button
+            class="cash-register__btn cash-register__btn--check"
+            id="purchase-btn"
+          >
+            Purchase
+          </button>
+        </div>
+
+        <div class="cash-register__container">
+          <div class="cash-register__display">
+            <p id="price-screen" class="cash-register__price-screen"></p>
+          </div>
+
+          <div class="cash-register__top">
+            <div class="cash-register__btns">
+              <button class="cash-register__btn"></button>
+              <button class="cash-register__btn"></button>
+              <button class="cash-register__btn"></button>
+              <button class="cash-register__btn"></button>
+              <button class="cash-register__btn"></button>
+              <button class="cash-register__btn"></button>
+              <button class="cash-register__btn"></button>
+              <button class="cash-register__btn"></button>
+              <button class="cash-register__btn"></button>
+            </div>
+            <div
+              id="cash-drawer-display"
+              class="cash-register__drawer-display"
+            ></div>
+          </div>
+
+          <div class="cash-register__bottom">
+            <div class="cash-register__circle"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../javascript/cash-register.js"></script>
+  </body>
+</html>
