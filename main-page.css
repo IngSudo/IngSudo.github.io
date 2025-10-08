@@ -40,10 +40,45 @@ hr {
 
 .navbar-menu {
   list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-menu.active {
   display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
+}
+
+.navbar-hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .navbar-hamburger {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    gap: 20px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
 }
 
 .navbar-link {
