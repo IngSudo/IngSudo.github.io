@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPG Creature Search App</title>
+    <link rel="stylesheet" href="../styles/rpg.css" />
+  </head>
+
+  <body>
+    <main class="rpg">
+      <div class="rpg__container">
+        <h1 class="rpg__title">RPG Creature Search App</h1>
+        <form class="rpg__form" role="search">
+          <label class="rpg__form-label">Search for Creature Name or ID:</label>
+          <input type="text" class="rpg__form-input" name="creature" required />
+          <button type="submit" class="rpg__form-btn">Search</button>
+        </form>
+
+        <div class="rpg__output">
+          <div class="rpg__output-top">
+            <div class="rpg__info">
+              <span class="rpg__info-name"></span>
+              <span class="rpg__info-id"></span>
+              <div class="rpg__info-size">
+                <span class="rpg__info-weight"></span>
+                <span class="rpg__info-height"></span>
+              </div>
+            </div>
+
+            <div class="rpg__types"></div>
+
+            <div class="rpg__special">
+              <div class="rpg__special-name"></div>
+              <div class="rpg__special-description"></div>
+            </div>
+          </div>
+
+          <div class="rpg__output-bottom">
+            <table class="rpg__stats">
+              <tr>
+                <th>Base</th>
+                <th>Stats</th>
+              </tr>
+              <tr>
+                <td>HP:</td>
+                <td class="rpg__stat-hp"></td>
+              </tr>
+              <tr>
+                <td>Attack:</td>
+                <td class="rpg__stat-attack"></td>
+              </tr>
+              <tr>
+                <td>Defense:</td>
+                <td class="rpg__stat-defense"></td>
+              </tr>
+              <tr>
+                <td>Sp. Attack:</td>
+                <td class="rpg__stat-sp-attack"></td>
+              </tr>
+              <tr>
+                <td>Sp. Defense:</td>
+                <td class="rpg__stat-sp-defense"></td>
+              </tr>
+              <tr>
+                <td>Speed:</td>
+                <td class="rpg__stat-speed"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- table the monster names-->
+
+      <div class="rpg__monsters">
+        <h2 class="rpg__monsters-name">Name of Monsters</h2>
+        <table class="rpg__table-monster rpg__stats">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Pyrolynx</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Aquoroc</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Voltadon</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Floraspine</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Cryostag</td>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <script src="../javascript/rpg.js"></script>
+  </body>
+</html>
