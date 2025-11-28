@@ -19,14 +19,22 @@ function App() {
   const [color, setColor] = React.useState("#16a085");
 
   React.useEffect(() => {
-    fetch(
-      "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
-    )
-      .then((res) => res.json())
-      .then((data) => {
+    const loadQuotes = async () => {
+      try {
+        const res = await fetch(
+          "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
+        );
+        if (!res.ok) {
+          throw new Error("Error al obtener las citas");
+        }
+        const data = await res.json();
         setQuotes(data.quotes);
         randomQuote(data.quotes);
-      });
+      } catch (error) {
+        console.error("error al buscar:", error);
+      }
+    };
+    loadQuotes();
   }, []);
 
   function randomQuote(quotesArray = quotes) {
@@ -52,7 +60,7 @@ function App() {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa fa-twitter"></i>
+              <i className="fa fa-twitter"></i>
             </a>
 
             <a
@@ -60,7 +68,7 @@ function App() {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa fa-tumblr"></i>
+              <i className="fa fa-tumblr"></i>
             </a>
           </div>
 
