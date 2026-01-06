@@ -1,4 +1,13 @@
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true
-})
+module.exports = {
+  transpileDependencies: [],
+
+  chainWebpack: config => {
+    ['js', 'vue', 'css', 'scss', 'sass'].forEach(rule => {
+      if (config.module.rules.has(rule)) {
+        config.module
+          .rule(rule)
+          .uses.delete('cache-loader')
+      }
+    })
+  }
+}
