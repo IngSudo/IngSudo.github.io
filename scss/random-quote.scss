@@ -1,0 +1,79 @@
+:root {
+  --main-color: #16a085;
+}
+
+body {
+  transition: all 0.8s;
+  background-color: var(--main-color);
+}
+.quote {
+  position: relative;
+  font-weight: 400;
+
+  &__box {
+    border-radius: 3px;
+    margin: 8% auto auto auto;
+    width: 450px;
+    padding: 40px 50px;
+    background-color: #fff;
+    &__vignette {
+      color: var(--main-color);
+    }
+    &__text {
+      text-align: center;
+      width: 450px;
+      height: auto;
+      clear: both;
+      font-weight: 500;
+      font-size: 1.75em;
+      color: var(--main-color);
+    }
+    &__author {
+      width: 450px;
+      height: auto;
+      clear: both;
+      padding-top: 20px;
+      font-size: 1em;
+      text-align: right;
+      color: var(--main-color);
+    }
+    &__buttons {
+      width: 450px;
+      margin: auto;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__left {
+        display: flex;
+        gap: 5px;
+        & .quote__box__buttons__left__tweet,
+        & .quote__box__buttons__left__tumblr {
+          height: 30px;
+          width: 40px;
+          padding: 8px 0 0 0;
+          font-size: 1.2em;
+          text-align: center;
+          color: #fff;
+        }
+      }
+    }
+
+    &__button {
+      height: 38px;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      background-color: var(--main-color);
+      outline: none;
+      font-size: 0.85em;
+      padding: 8px 18px 6px 18px;
+      opacity: 1;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
