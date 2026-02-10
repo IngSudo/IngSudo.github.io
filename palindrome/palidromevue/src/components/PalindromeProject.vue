@@ -9,25 +9,28 @@
       <input
         class="palindrome__container-input"
         type="text"
-        placeholder="placeholder"
+        :placeholder="placeholder"
         v-model="userInput"
+        @input="errorMessage = ''"
         @keydown.enter="checkForPalindrome"
       />
       <button class="palindrome__container-btn" @click="checkForPalindrome">
         {{ buttonLabel }}
       </button>
+      <p v-if="errorMessage" class="palindrome__error">
+        {{ errorMessage }}
+      </p>
       <div
+        v-else
         class="palindrome__container-results"
         :class="{
-          'palindrome__container-results--hidden': results.length === 0,
+          'palindrome__container-results--hidden': isPalindromeResult === null,
         }"
       >
-        <p
-          v-for="(res, index) in results"
-          :key="index"
-          class="palindrome__user-input"
-        >
-          {{ res }}
+        <p class="palindrome__user-input">
+          {{ results }}
+          {{ isPalindromeResult ? "is" : "is not" }}
+          a palindrome
         </p>
       </div>
     </div>
@@ -45,32 +48,34 @@
 /* global defineProps */
 import { ref } from "vue";
 
-defineProps({
+const props = defineProps({
   title: String,
   inputLabel: String,
   placeholder: String,
   buttonLabel: String,
   noteText: String,
+  errtext: String,
 });
 
 const userInput = ref("");
-const results = ref([]);
+const results = ref("");
+const errorMessage = ref("");
+const isPalindromeResult = ref(null); 
 
 function checkForPalindrome() {
-  if (!userInput.value) {
-    alert("Please input a value");
+  if (!userInput.value.trim()) {
+    errorMessage.value = props.errtext;
+    isPalindromeResult.value = null;
     return;
   }
 
   const lowerCaseStr = userInput.value
     .replace(/[^A-Za-z0-9]/gi, "")
     .toLowerCase();
-  const isPalindrome = lowerCaseStr === [...lowerCaseStr].reverse().join("");
-  const resultMsg = `${userInput.value} ${
-    isPalindrome ? "is" : "is not"
-  } a palindrome.`;
 
-  results.value = [resultMsg];
+  results.value = userInput.value;
+  isPalindromeResult.value =
+    lowerCaseStr === [...lowerCaseStr].reverse().join("");
   userInput.value = "";
 }
 </script>
@@ -183,6 +188,13 @@ function checkForPalindrome() {
     font-size: 1.4rem;
     margin-top: 10px;
     text-align: center;
+  }
+
+  &__error {
+    margin-top: 10px;
+    color: #b00020;
+    text-align: center;
+    font-size: 1.4rem;
   }
 }
 

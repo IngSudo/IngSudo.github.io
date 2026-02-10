@@ -13,6 +13,7 @@
         placeholder="Insert Here"
         buttonLabel="Check"
         noteText="A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing."
+        errtext="Please insert one word"
       />
 
       <PalindromeChecker
@@ -21,6 +22,7 @@
         placeholder="Escribe aquí"
         buttonLabel="Verificar"
         noteText="Un palíndromo es una palabra o frase que se escribe igual hacia adelante que hacia atrás, ignorando puntuación, mayúsculas y espacios."
+        errtext="Inserte una palabra"
       />
     </div>
   </body>
