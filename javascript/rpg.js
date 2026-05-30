@@ -4,6 +4,7 @@
       this.rootE = rootE;
 
       // inputs y secciones
+      this.output = this.rootE.querySelector(".rpg__is-hidden");
       this.form = this.rootE.querySelector(".rpg__form");
       this.input = this.rootE.querySelector(".rpg__form-input");
 
@@ -30,6 +31,7 @@
         speed: this.rootE.querySelector(".rpg__stat-speed"),
       };
 
+      this.resetDisplay();
       this.initEvents();
     }
 
@@ -59,10 +61,11 @@
     }
 
     renderCreature(data) {
+      this.output.classList.remove("rpg__is-hidden");
       this.name.textContent = data.name.toUpperCase();
-      this.id.textContent = `#${data.id}`;
-      this.weight.textContent = `Weight: ${data.weight}`;
-      this.height.textContent = `Height: ${data.height}`;
+      this.id.textContent = data.id;
+      this.weight.textContent = data.weight;
+      this.height.textContent = data.height;
       this.specialName.textContent = data.special.name;
       this.specialDescription.textContent = data.special.description;
 
@@ -80,6 +83,7 @@
     }
 
     resetDisplay() {
+      this.output.classList.add("rpg__is-hidden");
       this.name.textContent = "";
       this.id.textContent = "";
       this.weight.textContent = "";

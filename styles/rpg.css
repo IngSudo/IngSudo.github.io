@@ -12,6 +12,9 @@
 .rpg * {
   margin: 0;
 }
+.rpg__is-hidden {
+  visibility: hidden;
+}
 .rpg__title {
   font-size: 1.7em;
   text-align: center;

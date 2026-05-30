@@ -12,6 +12,10 @@
     margin: 0;
   }
 
+  &__is-hidden{
+    visibility: hidden;
+  }
+
   &__title {
     font-size: 1.7em;
     text-align: center;
